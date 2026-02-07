@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply text-slate-100;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.desktop-bg {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(87, 165, 255, 0.25), transparent 35%),
+    radial-gradient(circle at 80% 25%, rgba(120, 84, 255, 0.28), transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.2), transparent 30%),
+    linear-gradient(120deg, #070b20 0%, #0b1235 40%, #140a2f 100%);
+}
+
+.glass-premium {
+  background: linear-gradient(140deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255,255,255,0.15);
+  border-radius: 22px;
+  backdrop-filter: blur(22px);
+}
+
+.panel {
+  @apply rounded-2xl border border-white/15 bg-white/[0.06];
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+}
+
+.input-premium {
+  @apply w-full rounded-2xl bg-slate-900/70 border border-white/15 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-400/60;
+}
+
+.btn-premium {
+  @apply px-5 py-3 rounded-2xl bg-indigo-500/90 hover:bg-indigo-400 transition font-medium;
+  box-shadow: 0 6px 20px rgba(99,102,241,0.45);
+}
+
+.bubble-user {
+  @apply ml-auto max-w-[80%] rounded-2xl px-4 py-3 bg-cyan-400/20 border border-cyan-300/30;
+}
+
+.bubble-bot {
+  @apply max-w-[80%] rounded-2xl px-4 py-3 bg-white/10 border border-white/15;
+}
+
+.mini-card {
+  @apply rounded-xl bg-white/[0.07] border border-white/15 px-3 py-3;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 18px rgba(129, 140, 248, 0.6);
+}
