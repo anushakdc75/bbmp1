@@ -17,6 +17,7 @@
     "react-router-dom": "^6.26.2",
     "recharts": "^2.12.7",
     "gsap": "^3.12.5"
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
     "@types/react": "^18.3.8",
