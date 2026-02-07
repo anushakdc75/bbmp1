@@ -57,3 +57,5 @@ body {
 .shadow-glow {
   box-shadow: 0 0 18px rgba(129, 140, 248, 0.6);
 }
+body { @apply text-slate-100 bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900; }
+.glass { @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl; }

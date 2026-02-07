@@ -1,28 +1,17 @@
 import { useEffect, useState } from 'react'
 import { api } from '../lib/api'
 
-function AnalyticsPage() {
+export default function Analytics() {
   const [data, setData] = useState(null)
-  const [error, setError] = useState('')
 
   useEffect(() => {
-    api
-      .get('/analytics')
-      .then((res) => {
-        setData(res.data)
-        setError('')
-      })
-      .catch((err) => {
-        setData(null)
-        setError(err?.response?.data?.detail || 'Unable to load analytics')
-      })
+    api.get('/analytics').then((res) => setData(res.data)).catch(() => setData(null))
   }, [])
 
   return (
     <div className="panel p-5 space-y-3">
       <h2 className="text-2xl font-semibold">Analytics Control Center</h2>
-      {!data && !error && <p className="text-slate-300">Connect backend to load analytics.</p>}
-      {error && <p className="text-rose-300">{error}</p>}
+      {!data && <p className="text-slate-300">Connect backend to load analytics.</p>}
       {data && (
         <div className="grid grid-cols-3 gap-3">
           <div className="mini-card">Total Complaints: {data.total_complaints}</div>
@@ -33,5 +22,4 @@ function AnalyticsPage() {
     </div>
   )
 }
-
-export default AnalyticsPage
+export default function Analytics(){ return <div className="glass p-4">Analytics charts placeholder</div> }
