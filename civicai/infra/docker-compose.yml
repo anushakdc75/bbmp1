@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  api:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    env_file: ../backend/.env
+    ports: ["8000:8000"]
+    volumes:
+      - ../data:/app/data
+  web:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    ports: ["5173:5173"]
+    depends_on: [api]
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]

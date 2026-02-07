@@ -1,0 +1,6 @@
+text,category,solution,department,location,resolved_status
+"garbage not cleared in ward 12",Garbage,"Use BBMP Sahaaya app and attach photo",Solid Waste Management,Ward 12,yes
+"water supply issue for two days",Water,"Register BWSSB complaint and check supply schedule",BWSSB,Ward 12,yes
+"pothole near school entrance",Road,"Roads wing inspection and pothole filling",BBMP Roads,Ward 18,no
+"streetlight not working",Electrical,"Raise BESCOM ticket and request immediate repair",BESCOM,Ward 44,yes
+"drain blockage causing flooding",Drainage,"Storm-water team to clear drain and deploy pump",SWD Department,Ward 30,no
